@@ -20,7 +20,34 @@ Please refer to the docs for the [Chinese Version](https://tuic.gov.taipei/docum
 
 ## Quick Start
 
-Please refer to the [Docs](https://tuic.gov.taipei/documentation/front-end/project-setup) for the quick start guide.
+### 使用 Docker 啟動專案
+
+1. 建立映像並啟動 FE/BE 服務：
+
+```bash
+docker-compose up --build
+```
+
+2. 啟動後服務說明：
+- 前端 FE（Nginx）：http://localhost/
+- 後端 BE（Golang）：http://localhost:8080/
+
+3. 停止所有服務：
+```bash
+docker-compose down
+```
+
+---
+
+### 服務細節
+- FE：Vue 前端，build 後由 Nginx 提供靜態頁面，預設監聽 80 port。
+- BE：Golang API，預設監聽 8080 port。
+
+---
+
+如需自訂服務參數，請修改 `docker-compose.yml`。
+
+請參考 [Docs](https://tuic.gov.taipei/documentation/front-end/project-setup) 取得更多開發細節。
 
 ## Documentation
 
